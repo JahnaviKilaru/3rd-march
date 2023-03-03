@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://kit.fontawesome.com/215d5ce33b.js" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: gold;
+		}
+		center{
+			margin: auto;
+			background-color: whitesmoke;
+			width: 40%;
+			padding: 2%;
+		}
+		input{
+			font-size: 1rem;
+			padding: 2%;
+			border-radius: 1px;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<p><input id="username" type="email" placeholder="Enter your user name"></p>
+		<p><input id="password" type="password" placeholder="Enter your password">
+		<span id="btn" onclick="display()"> 
+			<i class="fa-solid fa-eye-slash"></i>
+		</span></p>
+	</center>
+	<script type="text/javascript">
+		function display(){
+			var passwordData=document.getElementById("password");
+			console.log(passwordData.type)
+			if(passwordData.type=="password"){
+				var s=passwordData.setAttribute("type","text")
+				passwordData.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye"></i>`
+			}
+			else{
+				var s=passwordData.setAttribute("type","password")
+				passwordData.append(s)
+				document.getElementById("btn").innerHTML=`<i class="fa-solid fa-eye-slash">`
+			}
+		}
+	</script>
+</body>
+</html>
+
+<!-- 		<button id="btn" onclick="display()">show</button>
+ -->
